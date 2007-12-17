@@ -15,7 +15,6 @@ Source13:	%{name}-48x48.png
 Patch:		freedroid-1.0.2-vorbis.patch.bz2
 License:	GPL
 Group:		Games/Arcade
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://freedroid.sourceforge.net/
 BuildRequires:	SDL_mixer-devel SDL_image-devel jpeg-devel png-devel
 BuildRequires:	libvorbis-devel
