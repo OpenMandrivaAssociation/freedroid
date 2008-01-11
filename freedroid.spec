@@ -46,15 +46,6 @@ autoconf
 %install
 %{__rm} -rf $RPM_BUILD_ROOT
 %makeinstall_std transform=""
-%{__install} -d %{buildroot}%{_menudir}
-%{__cat} <<EOF > %{buildroot}%{_menudir}/%{name}
-?package(%{name}):command="%{_gamesbindir}/%{name}" \
-		  needs="x11" \
-		  icon="%{name}.png" \
-		  section="More Applications/Games/Arcade" \
-		  title="Freedroid"\
-		  longtitle="%{Summary}" xdg="true"
-EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -90,7 +81,6 @@ EOF
 %{_gamesdatadir}/%{name}
 %{_mandir}/man6/%{name}.6*
 %_datadir/applications/mandriva*
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
