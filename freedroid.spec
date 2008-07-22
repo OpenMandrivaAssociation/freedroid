@@ -1,6 +1,6 @@
 %define	name	freedroid
 %define	version	1.0.2
-%define release %mkrel 5
+%define release %mkrel 7
 %define	Summary	Clone of the C64 Game Paradroid
 
 Summary:	%{Summary}
