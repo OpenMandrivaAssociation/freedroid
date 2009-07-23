@@ -1,6 +1,6 @@
 %define	name	freedroid
 %define	version	1.0.2
-%define release %mkrel 7
+%define release %mkrel 8
 %define	Summary	Clone of the C64 Game Paradroid
 
 Summary:	%{Summary}
@@ -13,7 +13,8 @@ Source11:	%{name}-16x16.png
 Source12:	%{name}-32x32.png
 Source13:	%{name}-48x48.png
 Patch:		freedroid-1.0.2-vorbis.patch.bz2
-License:	GPL
+Patch1:		freedroid-1.0.2-format-strings.patch
+License:	GPLv2+
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		http://freedroid.sourceforge.net/
@@ -36,6 +37,7 @@ electric circuits.
 %prep
 %setup -q
 %patch -p1
+%patch1 -p1
 %{__cp} %SOURCE1 .
 autoconf
 
