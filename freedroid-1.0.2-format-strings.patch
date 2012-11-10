@@ -1,0 +1,52 @@
+diff -p -up freedroid-1.0.2/config.h.in~ freedroid-1.0.2/config.h.in
+--- freedroid-1.0.2/config.h.in~	2003-08-11 12:41:02.000000000 +0200
++++ freedroid-1.0.2/config.h.in	2009-07-23 11:24:39.000000000 +0200
+@@ -27,8 +27,8 @@
+ /* Define to 1 if you have the `SDL_mixer' library (-lSDL_mixer). */
+ #undef HAVE_LIBSDL_MIXER
+ 
+-/* Define to 1 if you have the `vorbis' library (-lvorbis). */
+-#undef HAVE_LIBVORBIS
++/* Define to 1 if you have the `vorbisfile' library (-lvorbisfile). */
++#undef HAVE_LIBVORBISFILE
+ 
+ /* Define to 1 if you have the `z' library (-lz). */
+ #undef HAVE_LIBZ
+@@ -126,5 +126,5 @@
+ /* Define to empty if `const' does not conform to ANSI C. */
+ #undef const
+ 
+-/* Define to `unsigned' if <sys/types.h> does not define. */
++/* Define to `unsigned int' if <sys/types.h> does not define. */
+ #undef size_t
+diff -p -up freedroid-1.0.2/src/init.c~ freedroid-1.0.2/src/init.c
+--- freedroid-1.0.2/src/init.c~	2003-08-09 14:19:32.000000000 +0200
++++ freedroid-1.0.2/src/init.c	2009-07-23 11:25:25.000000000 +0200
+@@ -554,13 +554,13 @@ parse_command_line (int argc, char *cons
+ 	   * following gnu-coding standards for command line interfaces */
+ 	case 'v':
+ 	  printf ("\n%s %s  \n", PACKAGE, VERSION); 
+-	  printf (copyright);
++	  printf ("%s", copyright);
+ 	  exit (0);
+ 	  break;
+ 
+ 	case 'h':
+ 	case '?':
+-	  printf (usage_string);
++	  printf ("%s", usage_string);
+ 	  exit (0);
+ 	  break;
+ 
+diff -p -up freedroid-1.0.2/src/misc.c~ freedroid-1.0.2/src/misc.c
+--- freedroid-1.0.2/src/misc.c~	2003-08-08 13:31:03.000000000 +0200
++++ freedroid-1.0.2/src/misc.c	2009-07-23 11:26:01.000000000 +0200
+@@ -889,7 +889,7 @@ DebugPrintf (int db_level, char *fmt, ..
+   if (db_level <= debug_level)
+     {
+       vsnprintf (buffer, 5000, fmt, args);
+-      fprintf (stderr, buffer);
++      fprintf (stderr, "%s", buffer);
+       fflush (stderr);
+     }
+ 
