@@ -1,6 +1,4 @@
 sources:
-  "freedroid-1.0.2.tar.bz2:"	076353328652e50f395be794463553bf22d03d19
-  "freedroid-16x16.png:"	61755d7eb6f43499320448ce1c42b1823e4ee7fc
-  "freedroid-32x32.png:"	5a24a18cc7c31a07901408dd14028d22d100f913
-  "freedroid-48x48.png:"	8cc947e89682009fa966bab2b35fd12fcbd18d32
-  "Freedroid_Manual.ps.bz2:"	524a7131c748a5aa44ff0cbb9d9f2559fd602c9f
+  "Freedroid_Manual.ps.bz2": 524a7131c748a5aa44ff0cbb9d9f2559fd602c9f
+  "freedroid-1.0.2-vorbis.patch.bz2": 9ee3784c243cc93b41e17ee773cd250a84a36bc0
+  "freedroid-1.0.2.tar.bz2": 076353328652e50f395be794463553bf22d03d19

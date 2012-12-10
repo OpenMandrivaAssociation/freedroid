@@ -90,3 +90,77 @@ EOF
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
+
+
+%changelog
+* Mon Jul 25 2011 GÃ¶tz Waschk <waschk@mandriva.org> 1.0.2-11mdv2012.0
++ Revision: 691505
+- rebuild
+
+* Sat Jul 24 2010 GÃ¶tz Waschk <waschk@mandriva.org> 1.0.2-10mdv2011.0
++ Revision: 558094
+- rebuild
+
+* Thu Jul 23 2009 GÃ¶tz Waschk <waschk@mandriva.org> 1.0.2-8mdv2010.0
++ Revision: 398785
+- fix format strings
+- update license
+
+* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 1.0.2-7mdv2009.0
++ Revision: 240721
+- rebuild
+- drop old menu
+- kill re-definition of %%buildroot on Pixel's request
+- kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Sun Aug 26 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.0.2-5mdv2008.0
++ Revision: 71620
+- Import freedroid
+
+
+
+* Thu Aug 24 2006 Götz Waschk <waschk@mandriva.org> 1.0.2-5mdv2007.0
+- fix vorbis detection
+- fix buildrequires
+- xdg menu
+
+* Mon Dec 05 2005 GÃ¶tz Waschk <waschk@mandriva.org> 1.0.2-4mdk
+- Rebuild
+
+* Fri Dec  3 2004 Götz Waschk <waschk@linux-mandrake.com> 1.0.2-3mdk
+- rebuild
+
+* Thu Nov 27 2003 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.0.2-2mdk
+- remove macosx devel files
+- macroized
+
+* Thu Nov 27 2003 Per Øyvind Karlsen <peroyvind@linux-mandrake.com> 1.0.2-1mdk
+- 1.0.2
+- cosmetics
+
+* Tue May  6 2003 Götz Waschk <waschk@linux-mandrake.com> 1.0.1-1mdk
+- add the man page
+- new version
+
+* Mon Apr 28 2003 Götz Waschk <waschk@linux-mandrake.com> 0.8.4-5mdk
+- fix buildrequires
+
+* Mon Apr 28 2003 Götz Waschk <waschk@linux-mandrake.com> 0.8.4-4mdk
+- fix distriblint warning
+
+* Sat Apr 26 2003 Per Øyvind Karlsen <peroyvind@sintrax.net> 0.8.4-3mdk
+- dropped Prefix tag
+- compile with $RPM_OPT_FLAGS
+- added icons
+
+* Fri Dec 20 2002 Götz Waschk <waschk@linux-mandrake.com> 0.8.4-2mdk
+- add the manual to the docs
+
+* Fri Dec 20 2002 Götz Waschk <waschk@linux-mandrake.com> 0.8.4-1mdk
+- initial package
