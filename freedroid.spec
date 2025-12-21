@@ -18,6 +18,11 @@ License:	GPLv2+
 Group:		Games/Arcade
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:		https://freedroid.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	SDL_mixer-devel SDL_image-devel jpeg-devel png-devel
 BuildRequires:	libvorbis-devel
 
